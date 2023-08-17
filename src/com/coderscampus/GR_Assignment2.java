@@ -30,26 +30,31 @@ public class GR_Assignment2 {
 			// win condition; comment this out
 			// dyad = monad;
 			
-			if (monad == dyad) {
-				System.out.println("BINGO!\n"
-						+ "This message will self-destruct in 4 seconds!");
-				Thread.sleep(4000);
-				// test message before returning
-				System.out.println("Returning after a victory");
-				return;
-			}
-			else {
-				System.out.print("Incorrect! Your number was ");
-				if (monad > dyad) {
-					System.out.println("TOO LOW!");
-				} else if (monad < dyad) {
-					System.out.println("TOO HIGH!");
-				}
-			}
 			if ((dyad < 1) | (dyad > 100)) {
 				System.out.println("I am not familiar with such a number."
-					+ "\nThere are only the counting numbers from 1 to 100.");
+					+ "\nThere are only the counting numbers from 1 to 100.\n"
+					+ "Your guess has been refunded.");
+				i++;
 			}
+			else {
+				if (monad == dyad) {
+					System.out.println("BINGO!\n"
+							+ "This message will self-destruct in 4 seconds!");
+					Thread.sleep(4000);
+					// test message before returning
+					System.out.println("Returning after a victory");
+					return;
+				}
+				else {
+					System.out.print("Incorrect! Your number was ");
+					if (monad > dyad) {
+						System.out.println("TOO LOW!");
+					} else if (monad < dyad) {
+						System.out.println("TOO HIGH!");
+					}
+				}
+			}
+			
 		}
 		System.out.println("It's a sad thing that your adventures have ended here!\n"
 				+ "The number was " + monad + ".");
