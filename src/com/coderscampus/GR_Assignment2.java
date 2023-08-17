@@ -7,17 +7,9 @@ import java.lang.Thread;
 public class GR_Assignment2 {
 
 	public static void main(String[] args) throws InterruptedException {
-		// THE MOST BORING MINIGAME EVER
 		Random zohar = new Random();
 		int monad = zohar.nextInt(100) + 1;
-		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
-		Thread.sleep(555);
-		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
-		Thread.sleep(555);
-		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
-		Thread.sleep(555);
-		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
-		Thread.sleep(555);
+		// knightOfFire();
 		System.out.println("Begin!");
 		
 		for (int i = 5; i >= 1; i--) {
@@ -61,6 +53,15 @@ public class GR_Assignment2 {
 		// test message before returning
 		System.out.println("Returning after a loss");
 		return;
+	}
+	
+	public static void knightOfFire() throws InterruptedException {
+		int s = (60000 / 132) * 4;
+		String sen = "TOTAL SENTENCE IMPOSED IS TEN";
+		for (int k = 4; k >= 1; k--) {
+			System.out.println(sen);
+			Thread.sleep(s);
+		}
 	}
 
 }
