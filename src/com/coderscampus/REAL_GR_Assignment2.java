@@ -9,7 +9,8 @@ public class REAL_GR_Assignment2 {
 	public static void main(String[] args) throws InterruptedException {
 		Random zohar = new Random();
 		int monad = zohar.nextInt(100) + 1;
-		// knightOfFire(132);
+		// knightOfFire(132, "TOTAL SENTENCE IMPOSED IS TEN");
+		// knightOfFire(181, "Hah hah hanihani haniwa haniwa!");
 		System.out.println("Begin!");
 		
 		for (int i = 5; i >= 1; i--) {
@@ -55,9 +56,8 @@ public class REAL_GR_Assignment2 {
 		return;
 	}
 	
-	public static void knightOfFire(int bpm) throws InterruptedException {
+	public static void knightOfFire(int bpm, String sen) throws InterruptedException {
 		int s = (60000 / bpm) * 4;
-		String sen = "TOTAL SENTENCE IMPOSED IS TEN";
 		for (int k = 4; k >= 1; k--) {
 			System.out.println(sen);
 			Thread.sleep(s);
