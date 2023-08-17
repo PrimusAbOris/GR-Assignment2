@@ -2,16 +2,25 @@ package com.coderscampus;
 
 import java.util.Random;
 import java.util.Scanner;
+import java.lang.Thread;
 
 public class GR_Assignment2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// THE MOST BORING MINIGAME EVER
 		Random zohar = new Random();
 		int monad = zohar.nextInt(100) + 1;
+		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
+		Thread.sleep(555);
+		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
+		Thread.sleep(555);
+		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
+		Thread.sleep(555);
+		System.out.println("TOTAL SENTENCE IMPOSED IS 5");
+		Thread.sleep(555);
+		System.out.println("Begin!");
 		
 		for (int i = 5; i >= 1; i--) {
-			//System.out.println("TOTAL SENTENCE IMPOSED IS " + i);
 			System.out.println("GUESSES LEFT: " + i);
 			System.out.println("Type in a number between 1 and 100.");
 			Scanner scanner = new Scanner(System.in);
@@ -19,14 +28,14 @@ public class GR_Assignment2 {
 			Integer dyad = Integer.parseInt(input);
 			
 			// win condition; comment this out
-			dyad = monad;
+			// dyad = monad;
 			
 			if (monad == dyad) {
 				System.out.println("BINGO!\n"
 						+ "This message will self-destruct in 4 seconds!");
-				wait(4);
+				Thread.sleep(4000);
 				// test message before returning
-				System.out.println("Returning");
+				System.out.println("Returning after a victory");
 				return;
 			}
 			else {
@@ -42,18 +51,11 @@ public class GR_Assignment2 {
 					+ "\nThere are only the counting numbers from 1 to 100.");
 			}
 		}
-		System.out.println("It's a sad thing that your adventures have ended here!");
+		System.out.println("It's a sad thing that your adventures have ended here!\n"
+				+ "The number was " + monad + ".");
 		// test message before returning
-		System.out.println("Returning");
+		System.out.println("Returning after a loss");
 		return;
 	}
-	
-	public static void wait(int sec) {
-		 try {
-			 Thread.currentThread().sleep(sec * 1000);
-		 } catch (InterruptedException e) {
-			 e.printStackTrace();
-		 }
-	 }
 
 }
