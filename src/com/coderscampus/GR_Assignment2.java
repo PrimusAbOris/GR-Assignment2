@@ -9,7 +9,7 @@ public class GR_Assignment2 {
 	public static void main(String[] args) throws InterruptedException {
 		Random zohar = new Random();
 		int monad = zohar.nextInt(100) + 1;
-		// knightOfFire();
+		// knightOfFire(132);
 		System.out.println("Begin!");
 		
 		for (int i = 5; i >= 1; i--) {
@@ -55,8 +55,8 @@ public class GR_Assignment2 {
 		return;
 	}
 	
-	public static void knightOfFire() throws InterruptedException {
-		int s = (60000 / 132) * 4;
+	public static void knightOfFire(int bpm) throws InterruptedException {
+		int s = (60000 / bpm) * 4;
 		String sen = "TOTAL SENTENCE IMPOSED IS TEN";
 		for (int k = 4; k >= 1; k--) {
 			System.out.println(sen);
