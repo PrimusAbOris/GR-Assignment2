@@ -10,6 +10,7 @@ public class GR_Assignment2 {
 		Random zohar = new Random();
 		int monad = zohar.nextInt(100) + 1;
 		// knightOfFire(132);
+		// testing......
 		System.out.println("Begin!");
 		
 		for (int i = 5; i >= 1; i--) {
