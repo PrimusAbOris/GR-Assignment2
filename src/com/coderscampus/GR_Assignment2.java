@@ -4,10 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GR_Assignment2 {
-// PROFESSIONAL VERSION. Outputs match the assignment prompt exactly.
+
 	public static void main(String[] args) {
 		Random zohar = new Random();
 		int monad = zohar.nextInt(100) + 1;
+		// test case:
+		// System.out.println(monad);
 		
 		for (int i = 5; i >= 1; i--) {
 			System.out.print("Pick a number between 1 and 100 ");
@@ -34,7 +36,7 @@ public class GR_Assignment2 {
 					}
 				}
 			}
-			scanner.close();
+
 			
 		}
 		System.out.println("You lose!\n"
