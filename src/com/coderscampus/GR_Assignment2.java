@@ -20,7 +20,8 @@ public class GR_Assignment2 {
 			
 			if ((dyad < 1) || (dyad > 100)) {
 				System.out.println("Your guess is not between 1 and 100, please try again");
-			}
+				i++;
+				}
 			else {
 				if (monad == dyad) {
 					System.out.println("You win!");
